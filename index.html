@@ -588,6 +588,57 @@ header{
   text-decoration:none;
 }
 
+.contact-list{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-top:8px;
+}
+
+.contact-line{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:9px 10px;
+}
+
+.contact-num{
+  font-family:'Archivo', sans-serif;
+  font-weight:700;
+  font-size:14px;
+  flex:1;
+  min-width:100px;
+}
+
+.mini-btn{
+  font-family:'Archivo', sans-serif;
+  font-weight:700;
+  font-size:12.5px;
+  text-decoration:none;
+  padding:7px 11px;
+  border-radius:7px;
+  white-space:nowrap;
+}
+
+.call-mini{
+  background:var(--ink);
+  color:var(--paper);
+}
+
+.wa-mini{
+  background:var(--green);
+  color:var(--ink);
+}
+
+@media (max-width:420px){
+  .contact-line{ justify-content:space-between; }
+  .contact-num{ width:100%; margin-bottom:4px; }
+}
+
 .map-frame{
   border-radius:var(--radius);
   overflow:hidden;
@@ -652,7 +703,7 @@ footer a{ color:rgba(250,250,248,0.8); text-decoration:none; }
     <div class="logo"><span class="mark">🚚</span>Move<span class="x">X</span> Jaipur</div>
     <div class="header-cta">
       <a class="call" href="tel:+919024067421"><span>Call </span>9024067421</a>
-      <a class="wa" href="https://chat.whatsapp.com/CpSnLqzGz8QDsssIRZ1OZs" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="wa" href="https://chat.whatsapp.com/KZ5jatE2nnL4q8MFQeO8zZ" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
 </header>
@@ -759,7 +810,7 @@ footer a{ color:rgba(250,250,248,0.8); text-decoration:none; }
             <div class="review-row"><span class="rk">Goods</span><span class="rv" id="rv-goods">—</span></div>
           </div>
 
-          <div class="review-note">📲 Tapping "Confirm on WhatsApp" copies this booking and opens our orders group — just paste and send so our whole team sees it.</div>
+          <div class="review-note">📲 Tapping "Confirm on WhatsApp" opens WhatsApp with this booking already filled in — just hit send and we'll confirm your driver.</div>
         </div>
 
       </div>
@@ -871,21 +922,44 @@ footer a{ color:rgba(250,250,248,0.8); text-decoration:none; }
         </div>
         <div class="info-row">
           <div class="ic">📞</div>
-          <div><h4>Call</h4><p>
-            <a href="tel:+919024067421">9024067421</a> &nbsp;/&nbsp;
-            <a href="tel:+919610062609">9610062609</a> &nbsp;/&nbsp;
-            <a href="tel:+919636815067">9636815067</a> &nbsp;/&nbsp;
-            <a href="tel:+917740933763">7740933763</a> &nbsp;/&nbsp;
-            <a href="tel:+918302879178">8302879178</a>
-          </p></div>
+          <div>
+            <h4>Call or WhatsApp a number directly</h4>
+            <div class="contact-list">
+              <div class="contact-line">
+                <span class="contact-num">9024067421</span>
+                <a class="mini-btn call-mini" href="tel:+919024067421">📞 Call</a>
+                <a class="mini-btn wa-mini" href="https://wa.me/919024067421" target="_blank" rel="noopener">💬 WhatsApp</a>
+              </div>
+              <div class="contact-line">
+                <span class="contact-num">9610062609</span>
+                <a class="mini-btn call-mini" href="tel:+919610062609">📞 Call</a>
+                <a class="mini-btn wa-mini" href="https://wa.me/919610062609" target="_blank" rel="noopener">💬 WhatsApp</a>
+              </div>
+              <div class="contact-line">
+                <span class="contact-num">9636815067</span>
+                <a class="mini-btn call-mini" href="tel:+919636815067">📞 Call</a>
+                <a class="mini-btn wa-mini" href="https://wa.me/919636815067" target="_blank" rel="noopener">💬 WhatsApp</a>
+              </div>
+              <div class="contact-line">
+                <span class="contact-num">7740933763</span>
+                <a class="mini-btn call-mini" href="tel:+917740933763">📞 Call</a>
+                <a class="mini-btn wa-mini" href="https://wa.me/917740933763" target="_blank" rel="noopener">💬 WhatsApp</a>
+              </div>
+              <div class="contact-line">
+                <span class="contact-num">8302879178</span>
+                <a class="mini-btn call-mini" href="tel:+918302879178">📞 Call</a>
+                <a class="mini-btn wa-mini" href="https://wa.me/918302879178" target="_blank" rel="noopener">💬 WhatsApp</a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="info-row">
-          <div class="ic">💬</div>
+          <div class="ic">👥</div>
           <div>
-            <h4>WhatsApp</h4>
-            <p>Join our orders group — every team member sees your message instantly</p>
+            <h4>Or message our whole team at once</h4>
+            <p>Join the MoveX Orders group — every team member sees it instantly</p>
             <div class="wa-numbers">
-              <a href="https://chat.whatsapp.com/CpSnLqzGz8QDsssIRZ1OZs" target="_blank" rel="noopener">💬 Join MoveX Orders Group</a>
+              <a href="https://chat.whatsapp.com/KZ5jatE2nnL4q8MFQeO8zZ" target="_blank" rel="noopener">💬 Join MoveX Orders Group</a>
             </div>
           </div>
         </div>
@@ -916,7 +990,7 @@ footer a{ color:rgba(250,250,248,0.8); text-decoration:none; }
 
 <div class="sticky-bar">
   <a class="call" href="tel:+919024067421">📞 Call</a>
-  <a class="wa" href="https://chat.whatsapp.com/CpSnLqzGz8QDsssIRZ1OZs" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="wa" href="https://chat.whatsapp.com/KZ5jatE2nnL4q8MFQeO8zZ" target="_blank" rel="noopener">💬 WhatsApp</a>
 </div>
 
 <script>
@@ -964,7 +1038,7 @@ function updateStepUI(){
     nextBtn.textContent = '💬 Confirm on WhatsApp';
     nextBtn.className = 'nav-btn confirm';
     nextBtn.disabled = false;
-    hint.textContent = 'Copies booking, then opens our orders group';
+    hint.textContent = 'Opens WhatsApp with your booking filled in';
     fillReview();
   }
 }
@@ -1008,36 +1082,16 @@ function sendBookingToWhatsApp(){
   const drop = document.getElementById('drop').value || 'Not provided';
   const goods = document.getElementById('goods').value || 'Not specified';
 
-  const plainMsg = 'New Booking - MoveX Jaipur\nVehicle: ' + selectedVehicle +
-    '\nName: ' + name +
-    '\nPhone: ' + phone +
-    '\nPickup: ' + pickup +
-    '\nDrop: ' + drop +
-    '\nGoods: ' + goods;
+  const msg = 'New Booking - MoveX Jaipur%0AVehicle: ' + encodeURIComponent(selectedVehicle) +
+    '%0AName: ' + encodeURIComponent(name) +
+    '%0APhone: ' + encodeURIComponent(phone) +
+    '%0APickup: ' + encodeURIComponent(pickup) +
+    '%0ADrop: ' + encodeURIComponent(drop) +
+    '%0AGoods: ' + encodeURIComponent(goods);
 
-  const groupLink = 'https://chat.whatsapp.com/CpSnLqzGz8QDsssIRZ1OZs';
+  const mainNumber = '919024067421';
 
-  function openGroup(){
-    window.open(groupLink, '_blank');
-  }
-
-  if(navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(plainMsg).then(function(){
-      showCopiedNotice();
-      openGroup();
-    }).catch(function(){
-      showCopiedNotice();
-      openGroup();
-    });
-  } else {
-    showCopiedNotice();
-    openGroup();
-  }
-}
-
-function showCopiedNotice(){
-  const hint = document.getElementById('hintText');
-  hint.textContent = '✅ Booking copied — paste it in the group chat that just opened';
+  window.open('https://wa.me/' + mainNumber + '?text=' + msg, '_blank');
 }
 
 updateStepUI();
