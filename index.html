@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoveX Jaipur | Book Tata Ace & Pickup Online</title>
+<meta name="description" content="Book a Tata Ace or Pickup in Sanganer, Jaipur in 3 steps. Pick your vehicle, enter pickup & drop, confirm on WhatsApp instantly.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --ink:#15171A;
+  --ink-2:#202329;
+  --paper:#FAFAF8;
+  --card:#FFFFFF;
+  --orange:#FF5A1F;
+  --orange-dark:#E14710;
+  --green:#22C55E;
+  --green-dark:#16A34A;
+  --muted:#8B92A0;
+  --line: rgba(21,23,26,0.10);
+  --line-soft: rgba(255,255,255,0.12);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+  font-family:'Inter', sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+.display{ font-family:'Archivo Black', sans-serif; letter-spacing:-0.01em; }
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+button{ font-family:inherit; }
+
+.wrap{ max-width:1180px; margin:0 auto; padding:0 24px; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+  outline:3px solid var(--orange);
+  outline-offset:2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; }
+  html{ scroll-behavior:auto; }
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+  position:sticky; top:0; z-index:50;
+  background:var(--ink); color:var(--paper);
+}
+
+.header-inner{
+  display:flex; justify-content:space-between; align-items:center; padding:16px 0;
+}
+
+.logo{
+  font-family:'Archivo Black', sans-serif;
+  font-size:21px;
+  display:flex; align-items:center; gap:10px;
+}
+
+.logo .mark{
+  width:36px; height:36px;
+  background:linear-gradient(135deg, var(--orange), var(--orange-dark));
+  border-radius:9px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:17px; flex-shrink:0;
+  color:white;
+}
+
+.logo .x{ color:var(--orange); }
+
+.header-cta{ display:flex; gap:10px; }
+
+.header-cta a{
+  font-family:'Archivo', sans-serif; font-weight:700; font-size:14px;
+  text-decoration:none; padding:10px 16px; border-radius:8px; white-space:nowrap;
+}
+
+.header-cta .call{ background:transparent; color:var(--paper); border:1.5px solid var(--line-soft); }
+.header-cta .wa{ background:var(--green); color:var(--ink); }
+
+@media (max-width:560px){
+  .header-cta .call span{ display:none; }
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+  background:var(--ink);
+  color:var(--paper);
+  padding:44px 0 70px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  top:-120px; right:-120px;
+  width:380px; height:380px;
+  background:radial-gradient(circle, rgba(255,90,31,0.25), transparent 70%);
+  pointer-events:none;
+}
+
+.hero-top{
+  text-align:center;
+  max-width:640px;
+  margin:0 auto 36px;
+  position:relative;
+  z-index:1;
+}
+
+.eyebrow{
+  font-family:'Archivo', sans-serif; font-weight:700; font-size:13px;
+  letter-spacing:0.08em; text-transform:uppercase; color:var(--orange);
+  margin-bottom:16px;
+  display:inline-flex; align-items:center; gap:9px;
+}
+
+.eyebrow .dot{
+  width:8px; height:8px; background:var(--green); border-radius:50%;
+  box-shadow:0 0 0 4px rgba(34,197,94,0.25);
+}
+
+.hero h1{
+  font-size:clamp(30px, 4.6vw, 48px);
+  line-height:1.06;
+  margin-bottom:14px;
+}
+
+.hero h1 em{ color:var(--orange); font-style:normal; }
+
+.hero-top p{
+  font-size:16.5px;
+  color:rgba(250,250,248,0.65);
+}
+
+/* ---------- BOOKING CARD (signature element) ---------- */
+
+.booker{
+  background:var(--card);
+  color:var(--ink);
+  border-radius:20px;
+  max-width:600px;
+  margin:0 auto;
+  box-shadow:0 30px 70px rgba(0,0,0,0.4);
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+
+.booker-progress{
+  height:4px;
+  background:var(--line);
+  position:relative;
+}
+
+.booker-progress-fill{
+  position:absolute; left:0; top:0; height:100%;
+  background:var(--orange);
+  width:33.33%;
+  transition:width 0.3s ease;
+}
+
+.booker-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 24px 0;
+}
+
+.booker-steps{
+  display:flex;
+  gap:18px;
+  font-family:'Archivo', sans-serif;
+  font-size:12.5px;
+  font-weight:700;
+  color:var(--muted);
+}
+
+.booker-steps span.active{ color:var(--orange); }
+.booker-steps span.done{ color:var(--ink); }
+
+.booker-body{ padding:22px 24px 24px; min-height:300px; }
+
+.step-title{
+  font-family:'Archivo', sans-serif;
+  font-weight:800;
+  font-size:19px;
+  margin-bottom:4px;
+}
+
+.step-sub{
+  font-size:13.5px;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+/* Step 1: vehicle cards */
+
+.vehicle-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+}
+
+.vehicle-card{
+  border:2px solid var(--line);
+  border-radius:var(--radius-sm);
+  overflow:hidden;
+  cursor:pointer;
+  background:var(--card);
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+  transition:border-color 0.15s ease, transform 0.1s ease;
+}
+
+.vehicle-card:hover{ transform:translateY(-2px); }
+
+.vehicle-card.selected{
+  border-color:var(--orange);
+  box-shadow:0 0 0 3px rgba(255,90,31,0.15);
+}
+
+.vehicle-card img{
+  width:100%;
+  height:88px;
+  object-fit:cover;
+}
+
+.vehicle-card .vc-body{ padding:9px 10px 11px; }
+
+.vehicle-card .vc-name{
+  font-family:'Archivo', sans-serif;
+  font-weight:800;
+  font-size:13.5px;
+  margin-bottom:2px;
+}
+
+.vehicle-card .vc-meta{
+  font-size:10.5px;
+  color:var(--muted);
+  line-height:1.3;
+}
+
+.vehicle-card .vc-check{
+  float:right;
+  width:18px; height:18px;
+  border-radius:50%;
+  border:2px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+  font-size:10px;
+  color:transparent;
+}
+
+.vehicle-card.selected .vc-check{
+  background:var(--orange);
+  border-color:var(--orange);
+  color:white;
+}
+
+/* Step 2: form fields */
+
+.field{ margin-bottom:14px; }
+
+.field label{
+  font-family:'Archivo', sans-serif;
+  font-weight:700;
+  font-size:12.5px;
+  display:block;
+  margin-bottom:6px;
+  color:var(--ink-2);
+}
+
+.field input, .field textarea{
+  width:100%;
+  padding:13px 14px;
+  border:1.5px solid var(--line);
+  border-radius:9px;
+  font-family:'Inter', sans-serif;
+  font-size:15px;
+  background:var(--paper);
+  color:var(--ink);
+}
+
+.field textarea{ resize:vertical; min-height:64px; }
+
+.field-row{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+
+/* Step 3: review */
+
+.review-list{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  overflow:hidden;
+  margin-bottom:16px;
+}
+
+.review-row{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  padding:13px 16px;
+  border-bottom:1px solid var(--line);
+  font-size:14px;
+}
+
+.review-row:last-child{ border-bottom:none; }
+
+.review-row .rk{ color:var(--muted); flex-shrink:0; }
+.review-row .rv{ font-weight:600; text-align:right; }
+
+.review-note{
+  background:rgba(255,90,31,0.07);
+  border:1px dashed rgba(255,90,31,0.35);
+  border-radius:var(--radius-sm);
+  padding:12px 14px;
+  font-size:13px;
+  color:var(--ink-2);
+  margin-bottom:6px;
+}
+
+/* Footer nav buttons inside booker */
+
+.booker-nav{
+  display:flex;
+  gap:10px;
+  padding:0 24px 24px;
+}
+
+.nav-btn{
+  font-family:'Archivo', sans-serif;
+  font-weight:800;
+  font-size:15px;
+  padding:14px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  flex:1;
+  transition:background 0.15s ease, opacity 0.15s ease;
+}
+
+.nav-btn.ghost{
+  background:var(--paper);
+  color:var(--ink);
+  border:1.5px solid var(--line);
+  flex:0.6;
+}
+
+.nav-btn.primary{
+  background:var(--orange);
+  color:white;
+}
+
+.nav-btn.primary:hover{ background:var(--orange-dark); }
+
+.nav-btn.confirm{
+  background:var(--green);
+  color:var(--ink);
+}
+
+.nav-btn.confirm:hover{ background:var(--green-dark); color:white; }
+
+.nav-btn:disabled{
+  opacity:0.45;
+  cursor:not-allowed;
+}
+
+.hint{
+  font-size:12px;
+  color:var(--muted);
+  text-align:center;
+  padding:0 24px 18px;
+  margin-top:-8px;
+}
+
+@media (max-width:480px){
+  .vehicle-grid{ grid-template-columns:1fr 1fr 1fr; gap:7px; }
+  .vehicle-card img{ height:64px; }
+  .vehicle-card .vc-body{ padding:7px 7px 9px; }
+  .vehicle-card .vc-name{ font-size:11.5px; }
+  .vehicle-card .vc-meta{ font-size:9.5px; }
+  .field-row{ grid-template-columns:1fr; }
+  .booker-body{ padding:20px 18px 18px; }
+  .booker-nav{ padding:0 18px 20px; }
+}
+
+/* ---------- TRUST STRIP ---------- */
+
+.trust-strip{
+  background:var(--paper);
+  padding:0;
+  margin-top:-1px;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.trust-item{
+  padding:22px 18px;
+  text-align:center;
+  border-right:1px solid var(--line);
+}
+
+.trust-item:last-child{ border-right:none; }
+
+.trust-item .t-num{
+  font-family:'Archivo Black', sans-serif;
+  font-size:24px;
+  color:var(--orange);
+}
+
+.trust-item .t-label{
+  font-size:12.5px;
+  color:var(--muted);
+  margin-top:4px;
+}
+
+@media (max-width:700px){
+  .trust-grid{ grid-template-columns:repeat(2,1fr); }
+  .trust-item:nth-child(2){ border-right:none; }
+}
+
+/* ---------- FLEET DETAIL SECTION ---------- */
+
+.fleet-section{ padding:64px 0; }
+
+.section-head{ margin-bottom:36px; }
+.section-head .eyebrow{ color:var(--orange-dark); }
+.section-head h2{ font-size:clamp(26px, 3.4vw, 36px); line-height:1.1; }
+.section-head p{ color:var(--muted); margin-top:10px; font-size:15.5px; max-width:560px; }
+
+.fleet-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:20px;
+}
+
+.fleet-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+
+.fleet-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.fleet-card-body{ padding:22px; }
+
+.fleet-card-body h3{
+  font-family:'Archivo', sans-serif;
+  font-weight:800;
+  font-size:19px;
+  margin-bottom:8px;
+}
+
+.fleet-card-body p{
+  font-size:14.5px;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.tag-row{ display:flex; gap:8px; flex-wrap:wrap; }
+
+.tag{
+  font-size:12px;
+  font-weight:700;
+  font-family:'Archivo', sans-serif;
+  background:rgba(255,90,31,0.1);
+  color:var(--orange-dark);
+  padding:5px 10px;
+  border-radius:20px;
+}
+
+@media (max-width:980px){
+  .fleet-grid{ grid-template-columns:1fr 1fr; }
+}
+
+@media (max-width:760px){
+  .fleet-grid{ grid-template-columns:1fr; }
+}
+
+/* ---------- SERVICES ---------- */
+
+.services-section{ background:var(--ink); color:var(--paper); padding:64px 0; }
+.services-section .section-head h2{ color:var(--paper); }
+.services-section .section-head p{ color:rgba(250,250,248,0.6); }
+.services-section .eyebrow{ color:var(--orange); }
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:1px;
+  background:var(--line-soft);
+  border:1px solid var(--line-soft);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+
+.service{
+  background:var(--ink-2);
+  padding:24px 18px;
+  text-align:center;
+}
+
+.service .icon{ font-size:24px; margin-bottom:10px; display:block; }
+.service .name{ font-family:'Archivo', sans-serif; font-weight:700; font-size:14.5px; }
+
+@media (max-width:860px){ .services-grid{ grid-template-columns:repeat(2,1fr); } }
+
+/* ---------- CONTACT ---------- */
+
+.contact-section{ padding:64px 0; }
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.info-row{
+  display:flex; gap:16px; align-items:flex-start;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:18px;
+  margin-bottom:14px;
+}
+
+.info-row .ic{
+  font-size:20px; flex-shrink:0; width:40px; height:40px;
+  background:rgba(255,90,31,0.1);
+  border-radius:9px;
+  display:flex; align-items:center; justify-content:center;
+}
+
+.info-row h4{
+  font-family:'Archivo', sans-serif; font-size:13px; margin-bottom:4px;
+  color:var(--muted); text-transform:uppercase; letter-spacing:0.04em;
+}
+
+.info-row p{ font-size:15px; }
+.info-row a{ text-decoration:none; }
+.info-row a:hover{ color:var(--orange); }
+
+.wa-numbers{ display:flex; gap:8px; flex-wrap:wrap; margin-top:6px; }
+
+.wa-numbers a{
+  background:var(--green);
+  color:var(--ink);
+  font-family:'Archivo', sans-serif;
+  font-weight:700;
+  font-size:13.5px;
+  padding:8px 13px;
+  border-radius:7px;
+  text-decoration:none;
+}
+
+.map-frame{
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid var(--line);
+  height:100%;
+  min-height:280px;
+}
+
+.map-frame iframe{ width:100%; height:100%; border:0; display:block; }
+
+@media (max-width:860px){
+  .contact-grid{ grid-template-columns:1fr; }
+  .map-frame{ min-height:240px; }
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+  background:#0E0F11;
+  color:rgba(250,250,248,0.5);
+  padding:26px 0 100px;
+  text-align:center;
+  font-size:13.5px;
+  line-height:1.9;
+}
+
+footer a{ color:rgba(250,250,248,0.8); text-decoration:none; }
+
+/* ---------- STICKY MOBILE BAR ---------- */
+
+.sticky-bar{
+  position:fixed; bottom:0; left:0; right:0; z-index:60;
+  display:none;
+  background:var(--card);
+  box-shadow:0 -8px 24px rgba(0,0,0,0.15);
+  padding:10px 14px;
+  gap:10px;
+}
+
+.sticky-bar a{
+  flex:1; text-align:center;
+  font-family:'Archivo', sans-serif; font-weight:800; font-size:15px;
+  padding:14px; border-radius:10px; text-decoration:none;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+}
+
+.sticky-bar .call{ background:var(--ink); color:var(--paper); }
+.sticky-bar .wa{ background:var(--green); color:var(--ink); }
+
+@media (max-width:760px){
+  .sticky-bar{ display:flex; }
+  footer{ padding-bottom:90px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="logo"><span class="mark">🚚</span>Move<span class="x">X</span> Jaipur</div>
+    <div class="header-cta">
+      <a class="call" href="tel:+919024067421"><span>Call </span>9024067421</a>
+      <a class="wa" href="https://wa.me/919024067421?text=Hi%2C%20I%20want%20to%20book%20a%20vehicle%20for%20goods%20transport" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="eyebrow"><span class="dot"></span> Live in Sanganer, Jaipur</div>
+      <h1>Book your <em>Pickup</em> or<br><em>Tata Ace</em> right here</h1>
+      <p>Pick a vehicle, add your pickup & drop, and confirm — done in under a minute.</p>
+    </div>
+
+    <div class="booker" id="booker">
+      <div class="booker-progress"><div class="booker-progress-fill" id="progressFill"></div></div>
+      <div class="booker-head">
+        <div class="booker-steps">
+          <span id="stepLabel1" class="active">1. Vehicle</span>
+          <span id="stepLabel2">2. Details</span>
+          <span id="stepLabel3">3. Confirm</span>
+        </div>
+      </div>
+
+      <div class="booker-body">
+
+        <!-- STEP 1 -->
+        <div class="step" id="step1">
+          <div class="step-title">Choose your vehicle</div>
+          <div class="step-sub">Both are available 24x7 from Sanganer</div>
+          <div class="vehicle-grid">
+
+            <button type="button" class="vehicle-card" data-vehicle="Tata Ace" onclick="selectVehicle(this, 'Tata Ace')">
+              <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=500&q=80" alt="Tata Ace mini truck, India">
+              <div class="vc-body">
+                <span class="vc-check">✓</span>
+                <div class="vc-name">Tata Ace</div>
+                <div class="vc-meta">Closed body · 750 kg</div>
+              </div>
+            </button>
+
+            <button type="button" class="vehicle-card" data-vehicle="Pickup" onclick="selectVehicle(this, 'Pickup')">
+              <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&q=80" alt="Open body Pickup truck, India">
+              <div class="vc-body">
+                <span class="vc-check">✓</span>
+                <div class="vc-name">Pickup</div>
+                <div class="vc-meta">Open body · heavy load</div>
+              </div>
+            </button>
+
+            <button type="button" class="vehicle-card" data-vehicle="Tempo (3-Wheeler)" onclick="selectVehicle(this, 'Tempo (3-Wheeler)')">
+              <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=500&q=80" alt="Three-wheeler Tempo loader, India">
+              <div class="vc-body">
+                <span class="vc-check">✓</span>
+                <div class="vc-name">Tempo</div>
+                <div class="vc-meta">3-wheeler · light load</div>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step" id="step2" style="display:none;">
+          <div class="step-title">Your trip details</div>
+          <div class="step-sub">We'll use this to confirm your booking on WhatsApp</div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" placeholder="e.g. Rohit Sharma">
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" type="tel" placeholder="10-digit mobile">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="pickup">Pickup address</label>
+            <input id="pickup" placeholder="e.g. Meena Chowk, Sanganer">
+          </div>
+
+          <div class="field">
+            <label for="drop">Drop address</label>
+            <input id="drop" placeholder="Where should we deliver?">
+          </div>
+
+          <div class="field">
+            <label for="goods">Describe the goods (optional)</label>
+            <textarea id="goods" placeholder="e.g. 2 almirahs, 1 sofa, 5 boxes"></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step" id="step3" style="display:none;">
+          <div class="step-title">Review & confirm</div>
+          <div class="step-sub">Check your details, then send to confirm on WhatsApp</div>
+
+          <div class="review-list">
+            <div class="review-row"><span class="rk">Vehicle</span><span class="rv" id="rv-vehicle">—</span></div>
+            <div class="review-row"><span class="rk">Name</span><span class="rv" id="rv-name">—</span></div>
+            <div class="review-row"><span class="rk">Phone</span><span class="rv" id="rv-phone">—</span></div>
+            <div class="review-row"><span class="rk">Pickup</span><span class="rv" id="rv-pickup">—</span></div>
+            <div class="review-row"><span class="rk">Drop</span><span class="rv" id="rv-drop">—</span></div>
+            <div class="review-row"><span class="rk">Goods</span><span class="rv" id="rv-goods">—</span></div>
+          </div>
+
+          <div class="review-note">📲 Tapping "Confirm on WhatsApp" opens WhatsApp with this booking filled in — just hit send and we'll confirm your driver.</div>
+        </div>
+
+      </div>
+
+      <div class="booker-nav">
+        <button class="nav-btn ghost" id="backBtn" onclick="goBack()" style="visibility:hidden;">Back</button>
+        <button class="nav-btn primary" id="nextBtn" onclick="goNext()" disabled>Continue</button>
+      </div>
+      <div class="hint" id="hintText">Select a vehicle to continue</div>
+
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-item"><div class="t-num">24x7</div><div class="t-label">Available every day</div></div>
+      <div class="trust-item"><div class="t-num">3</div><div class="t-label">Vehicle types ready</div></div>
+      <div class="trust-item"><div class="t-num">&lt;1min</div><div class="t-label">To book on WhatsApp</div></div>
+      <div class="trust-item"><div class="t-num">Sanganer</div><div class="t-label">Based & local</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="fleet-section" id="fleet">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Our fleet</div>
+      <h2>Three vehicles. Every kind of load.</h2>
+      <p>Not sure which one fits your job? Call us and describe what you're moving.</p>
+    </div>
+    <div class="fleet-grid">
+
+      <div class="fleet-card">
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=700&q=80" alt="Tata Ace mini truck closed body, India">
+        <div class="fleet-card-body">
+          <h3>Tata Ace</h3>
+          <p>750 kg closed-body mini truck. Goods stay covered and protected — ideal for furniture, appliances, and courier loads.</p>
+          <div class="tag-row">
+            <span class="tag">750 KG</span>
+            <span class="tag">Closed body</span>
+            <span class="tag">City-friendly</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fleet-card">
+        <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=700&q=80" alt="Open body Pickup truck, India">
+        <div class="fleet-card-body">
+          <h3>Pickup</h3>
+          <p>Open-body pickup for bulkier or irregular-shaped loads — tiles, marble, construction material, and industrial goods.</p>
+          <div class="tag-row">
+            <span class="tag">Open body</span>
+            <span class="tag">Heavy loads</span>
+            <span class="tag">Construction-ready</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fleet-card">
+        <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=700&q=80" alt="Three-wheeler Tempo loader, India">
+        <div class="fleet-card-body">
+          <h3>Tempo (3-Wheeler)</h3>
+          <p>Compact and quick through narrow lanes — best for smaller loads, fast local drops, and tight city corners.</p>
+          <div class="tag-row">
+            <span class="tag">3-wheeler</span>
+            <span class="tag">Narrow lanes</span>
+            <span class="tag">Quick local drops</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What we move</div>
+      <h2>Goods transport for every job</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service"><span class="icon">🛋️</span><span class="name">Furniture Delivery</span></div>
+      <div class="service"><span class="icon">🧱</span><span class="name">Tiles & Marble</span></div>
+      <div class="service"><span class="icon">🏭</span><span class="name">Industrial Goods</span></div>
+      <div class="service"><span class="icon">📦</span><span class="name">Courier Delivery</span></div>
+      <div class="service"><span class="icon">🏠</span><span class="name">House Shifting</span></div>
+      <div class="service"><span class="icon">🏢</span><span class="name">Office Shifting</span></div>
+      <div class="service"><span class="icon">📤</span><span class="name">Warehouse Delivery</span></div>
+      <div class="service"><span class="icon">🤝</span><span class="name">B2B Logistics</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Prefer to call? We're always on.</h2>
+    </div>
+    <div class="contact-grid">
+
+      <div>
+        <div class="info-row">
+          <div class="ic">📍</div>
+          <div><h4>Address</h4><p>Meena Chowk, Watika Road,<br>Sanganer, Jaipur</p></div>
+        </div>
+        <div class="info-row">
+          <div class="ic">📞</div>
+          <div><h4>Call</h4><p>
+            <a href="tel:+919024067421">9024067421</a> &nbsp;/&nbsp;
+            <a href="tel:+919610062609">9610062609</a> &nbsp;/&nbsp;
+            <a href="tel:+919636815067">9636815067</a> &nbsp;/&nbsp;
+            <a href="tel:+917740933763">7740933763</a> &nbsp;/&nbsp;
+            <a href="tel:+918302879178">8302879178</a>
+          </p></div>
+        </div>
+        <div class="info-row">
+          <div class="ic">💬</div>
+          <div>
+            <h4>WhatsApp</h4>
+            <p>Both numbers are on WhatsApp too</p>
+            <div class="wa-numbers">
+              <a href="https://wa.me/919024067421" target="_blank" rel="noopener">💬 9024067421</a>
+              <a href="https://wa.me/919610062609" target="_blank" rel="noopener">💬 9610062609</a>
+              <a href="https://wa.me/919636815067" target="_blank" rel="noopener">💬 9636815067</a>
+              <a href="https://wa.me/917740933763" target="_blank" rel="noopener">💬 7740933763</a>
+              <a href="https://wa.me/918302879178" target="_blank" rel="noopener">💬 8302879178</a>
+            </div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="ic">🕒</div>
+          <div><h4>Working hours</h4><p>Open 24 x 7, every day</p></div>
+        </div>
+      </div>
+
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Sanganer,Jaipur&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="MoveX Jaipur location map"></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 MoveX Jaipur, Sanganer &nbsp;·&nbsp;
+    <a href="tel:+919024067421">9024067421</a> &nbsp;·&nbsp;
+    <a href="tel:+919610062609">9610062609</a> &nbsp;·&nbsp;
+    <a href="tel:+919636815067">9636815067</a> &nbsp;·&nbsp;
+    <a href="tel:+917740933763">7740933763</a> &nbsp;·&nbsp;
+    <a href="tel:+918302879178">8302879178</a>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="call" href="tel:+919024067421">📞 Call</a>
+  <a class="wa" href="https://wa.me/919024067421?text=Hi%2C%20I%20want%20to%20book%20a%20vehicle%20for%20goods%20transport" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<script>
+let currentStep = 1;
+let selectedVehicle = null;
+
+function selectVehicle(el, name){
+  document.querySelectorAll('.vehicle-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedVehicle = name;
+  document.getElementById('nextBtn').disabled = false;
+  document.getElementById('hintText').textContent = name + ' selected — tap Continue';
+}
+
+function updateStepUI(){
+  document.getElementById('step1').style.display = currentStep === 1 ? 'block' : 'none';
+  document.getElementById('step2').style.display = currentStep === 2 ? 'block' : 'none';
+  document.getElementById('step3').style.display = currentStep === 3 ? 'block' : 'none';
+
+  document.getElementById('progressFill').style.width = (currentStep/3*100) + '%';
+
+  ['stepLabel1','stepLabel2','stepLabel3'].forEach((id, idx) => {
+    const el = document.getElementById(id);
+    el.classList.remove('active','done');
+    if(idx + 1 === currentStep) el.classList.add('active');
+    else if(idx + 1 < currentStep) el.classList.add('done');
+  });
+
+  document.getElementById('backBtn').style.visibility = currentStep === 1 ? 'hidden' : 'visible';
+
+  const nextBtn = document.getElementById('nextBtn');
+  const hint = document.getElementById('hintText');
+
+  if(currentStep === 1){
+    nextBtn.textContent = 'Continue';
+    nextBtn.className = 'nav-btn primary';
+    nextBtn.disabled = !selectedVehicle;
+    hint.textContent = selectedVehicle ? selectedVehicle + ' selected — tap Continue' : 'Select a vehicle to continue';
+  } else if(currentStep === 2){
+    nextBtn.textContent = 'Review Booking';
+    nextBtn.className = 'nav-btn primary';
+    nextBtn.disabled = false;
+    hint.textContent = 'Phone number helps us confirm faster';
+  } else if(currentStep === 3){
+    nextBtn.textContent = '💬 Confirm on WhatsApp';
+    nextBtn.className = 'nav-btn confirm';
+    nextBtn.disabled = false;
+    hint.textContent = 'Opens WhatsApp with your booking filled in';
+    fillReview();
+  }
+}
+
+function fillReview(){
+  const name = document.getElementById('name').value || 'Not provided';
+  const phone = document.getElementById('phone').value || 'Not provided';
+  const pickup = document.getElementById('pickup').value || 'Not provided';
+  const drop = document.getElementById('drop').value || 'Not provided';
+  const goods = document.getElementById('goods').value || 'Not specified';
+
+  document.getElementById('rv-vehicle').textContent = selectedVehicle;
+  document.getElementById('rv-name').textContent = name;
+  document.getElementById('rv-phone').textContent = phone;
+  document.getElementById('rv-pickup').textContent = pickup;
+  document.getElementById('rv-drop').textContent = drop;
+  document.getElementById('rv-goods').textContent = goods;
+}
+
+function goNext(){
+  if(currentStep === 3){
+    sendBookingToWhatsApp();
+    return;
+  }
+  if(currentStep === 1 && !selectedVehicle) return;
+  currentStep++;
+  updateStepUI();
+  document.getElementById('booker').scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+function goBack(){
+  if(currentStep === 1) return;
+  currentStep--;
+  updateStepUI();
+}
+
+function sendBookingToWhatsApp(){
+  const name = document.getElementById('name').value || 'Not provided';
+  const phone = document.getElementById('phone').value || 'Not provided';
+  const pickup = document.getElementById('pickup').value || 'Not provided';
+  const drop = document.getElementById('drop').value || 'Not provided';
+  const goods = document.getElementById('goods').value || 'Not specified';
+
+  const msg = 'New Booking - MoveX Jaipur%0AVehicle: ' + encodeURIComponent(selectedVehicle) +
+    '%0AName: ' + encodeURIComponent(name) +
+    '%0APhone: ' + encodeURIComponent(phone) +
+    '%0APickup: ' + encodeURIComponent(pickup) +
+    '%0ADrop: ' + encodeURIComponent(drop) +
+    '%0AGoods: ' + encodeURIComponent(goods);
+
+  window.open('https://wa.me/919024067421?text=' + msg, '_blank');
+}
+
+updateStepUI();
+</script>
+
+</body>
+</html>
